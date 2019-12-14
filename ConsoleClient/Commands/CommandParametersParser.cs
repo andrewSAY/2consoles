@@ -2,7 +2,7 @@
 using Domain;
 using Domain.Exceptions;
 
-namespace ConsoleClient
+namespace ConsoleClient.Commands
 {
     public class CommandParametersParser : ICommandParameterParser
     {

@@ -1,5 +1,5 @@
-using System;
 using Xunit;
+using ConsoleClient.Commands;
 using Domain;
 using Domain.Exceptions;
 

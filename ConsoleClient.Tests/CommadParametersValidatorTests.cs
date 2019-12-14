@@ -1,5 +1,6 @@
 using System;
 using Xunit;
+using ConsoleClient.Commands;
 using Domain;
 
 namespace ConsoleClient.Tests

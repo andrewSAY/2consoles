@@ -1,4 +1,5 @@
 ﻿using System;
+using ConsoleClient.Commands;
 using Domain;
 using Xunit;
 

@@ -1,7 +1,7 @@
 ﻿using System;
 using Domain;
 
-namespace ConsoleClient
+namespace ConsoleClient.Commands
 {
     public class CommandParametersClient : CommandParameters
     {
