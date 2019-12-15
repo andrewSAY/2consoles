@@ -1,7 +1,5 @@
-﻿using System;
-using ConsoleClient.Calculators;
+﻿using ConsoleClient.Calculators;
 using Domain;
-using AutoFixture;
 using Moq;
 using Xunit;
 
