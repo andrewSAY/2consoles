@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Domain;
 
 namespace ConsoleClient.Calculators
@@ -12,7 +13,7 @@ namespace ConsoleClient.Calculators
             _powerCalculator = powerCalculator ?? throw new ArgumentNullException(nameof(powerCalculator));
         }
 
-        public int Calculate(CommandParameters parameters)
+        public Task<int> CalculateAsync(CommandParameters parameters)
         {
             var powerValue = parameters.Value;
             switch (parameters.OperationType)
@@ -25,7 +26,7 @@ namespace ConsoleClient.Calculators
                     break;
             }
 
-            return powerValue;
+            return Task.FromResult(powerValue);
         }
     }
 }

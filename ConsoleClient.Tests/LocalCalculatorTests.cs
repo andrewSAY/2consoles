@@ -1,4 +1,5 @@
-﻿using ConsoleClient.Calculators;
+﻿using System.Threading.Tasks;
+using ConsoleClient.Calculators;
 using Domain;
 using Moq;
 using Xunit;
@@ -8,7 +9,7 @@ namespace ConsoleClient.Tests
     public class LocalCalculatorTests
     {
         [Fact]
-        public void Calculate_PassParametersWithCubeOperation_ReturnsExpectedValue()
+        public async Task Calculate_PassParametersWithCubeOperation_ReturnsExpectedValue()
         {
             var value = 3;
             var expectedResult = 27;
@@ -18,13 +19,13 @@ namespace ConsoleClient.Tests
             var localCalculator = new LocalCalculator(powerCalculatorMock.Object);
             var parameters = new CommandParameters(value, OperationType.Cube);
 
-            var result = localCalculator.Calculate(parameters);
+            var result = await localCalculator.CalculateAsync(parameters);
 
             Assert.Equal(expectedResult, result);
         }
 
         [Fact]
-        public void Calculate_PassParametersWithSquareOperation_ReturnsExpectedValue()
+        public async Task Calculate_PassParametersWithSquareOperation_ReturnsExpectedValue()
         {
             var value = 3;
             var expectedResult = 9;
@@ -34,7 +35,7 @@ namespace ConsoleClient.Tests
             var localCalculator = new LocalCalculator(powerCalculatorMock.Object);
             var parameters = new CommandParameters(value, OperationType.Square);
 
-            var result = localCalculator.Calculate(parameters);
+            var result = await localCalculator.CalculateAsync(parameters);
 
             Assert.Equal(expectedResult, result);
         }

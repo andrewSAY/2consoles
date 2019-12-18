@@ -1,9 +1,10 @@
-﻿using Domain;
+﻿using System.Threading.Tasks;
+using Domain;
 
 namespace ConsoleClient
 {
     public interface ICalculator
     {
-        int Calculate(CommandParameters parameters);
+        Task<int> CalculateAsync(CommandParameters parameters);
     }
 }

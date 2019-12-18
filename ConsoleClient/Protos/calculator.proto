@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option csharp_namespace = "Server";
+
+package Calculator;
+
+service Calculator {
+  rpc Calculate (CalculateRequest) returns (CalculateResponse);
+}
+
+message CalculateRequest{
+	sint32 value = 1;
+	string operationType = 2;
+}
+
+message CalculateResponse{
+	sint32 value = 1;
+}

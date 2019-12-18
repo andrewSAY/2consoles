@@ -33,7 +33,7 @@ namespace Server
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGrpcService<GreeterService>();
+                endpoints.MapGrpcService<CalculatorService>();
 
                 endpoints.MapGet("/", async context =>
                 {
